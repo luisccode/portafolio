@@ -1,10 +1,6 @@
 import React from 'react'
 import styeld from 'styled-components'
-
-interface ContainerProps {
-  children: React.ReactNode
-  tag?: React.ElementType | keyof JSX.IntrinsicElements
-}
+import { ContainerProps } from 'types/layout'
 
 const ContainerComponent = styeld.div`
     width: 90%;

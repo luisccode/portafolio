@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { FooterComponent } from './styles'
+import { Paragraph } from 'components/typography'
 
 const Footer = () => {
   const { pathname } = useRouter()
@@ -9,9 +10,9 @@ const Footer = () => {
     <FooterComponent
       defaultMargin={pathname === '/' || pathname.startsWith('/contact')}
     >
-      <p style={{ textAlign: 'center' }}>
+      <Paragraph margin="1.35rem 0">
         Copyright ©{new Date().getFullYear()} Luis Cortes. All Rights Reserved.
-      </p>
+      </Paragraph>
     </FooterComponent>
   )
 }

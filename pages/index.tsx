@@ -1,16 +1,17 @@
 import type { NextPage } from 'next'
-import Button from 'components/button'
 import { ThemeProvider } from 'styled-components'
 import theme from 'theme'
 import Layout from 'components/layout'
+import SEO from 'components/seo'
+import Main from 'components/main'
 
 const Home: NextPage = () => {
   return (
     <ThemeProvider theme={theme}>
       <Layout>
-        <Button bgcolor="#ff4900" onClick={() => console.log('ck')}>
-          Hola
-        </Button>
+        <SEO />
+
+        <Main />
       </Layout>
     </ThemeProvider>
   )

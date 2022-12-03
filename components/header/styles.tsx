@@ -92,3 +92,35 @@ export const LinkComponent = styled(Link)`
     align-items: flex-end;
   }
 `
+
+//burgerMenu styles
+export const Line = styled.div`
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background: #fff;
+  transition: all 0.5s ease-out;
+`
+
+export const MenuBtn = styled.div`
+  position: fixed;
+  right: 2rem;
+  z-index: 3;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+  &.open {
+    transform: rotate(180deg);
+  }
+  &.open > ${Line}:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  &.open > ${Line}:nth-child(2) {
+    opacity: 0;
+  }
+  &.open > ${Line}:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+  @media (min-width: ${(props) => props.theme.size.laptopS}) {
+    display: none;
+  }
+`

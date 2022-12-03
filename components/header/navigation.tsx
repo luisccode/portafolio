@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavComponent, LinkComponent } from './styles'
 import { useRouter } from 'next/router'
+import { NavigationProps } from 'types/layout'
 
 const linksInfo = [
   { name: 'Home', path: '/' },
@@ -10,11 +11,6 @@ const linksInfo = [
   { name: 'Blog', path: '#blog' },
   { name: 'Contact Me', path: '#contact' },
 ]
-
-interface NavigationProps {
-  open: boolean
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>
-}
 
 const Navigation = ({ open, setOpen }: NavigationProps) => {
   const { asPath } = useRouter()
@@ -36,4 +32,5 @@ const Navigation = ({ open, setOpen }: NavigationProps) => {
     </NavComponent>
   )
 }
+
 export default Navigation
